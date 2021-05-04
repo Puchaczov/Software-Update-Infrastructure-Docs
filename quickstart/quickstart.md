@@ -30,7 +30,7 @@ Before you starts hacking, we would like to introduce major concepts we uses in 
 
 **Release line** - A single release line takes from separate release to another separate release (excludingly).
 
-![Single release line](./SingleReleaseLine.png)
+![Single release line](./images/SingleReleaseLine.png)
 
 **Separate release** - When you discontinue current release line (ie. you end up supporting version 1.0 and starts supporting version 2.0) and doesn't want your users to being able to upgrade applicatioon automatically. This is also usefull when you do the first release of your application.
 
