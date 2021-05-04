@@ -2,7 +2,7 @@
 
 To consider how simple update process might looks like, let's look at the image below
 
-![Application Update Flow Strategy](./ApplicationUpdateFlowStrategy.png)
+![Application Update Flow Strategy](./images/ApplicationUpdateFlowStrategy.png)
 
 This is not the only possible strategy to use but the most obvious so let's follow that and describe what happens here. For the beginning let's assume that the developer released application in version 1.0. The developer placed a link on his page to download installer of his application. User has installed this application. After some time user would like to use the application again but the developer already released two minor versions (1.1 and 1.2). User clicks the application icon, what happens?
 
@@ -42,7 +42,7 @@ Before you starts hacking, we would like to introduce major concepts we uses in 
 
 We are going to use the image below as our reference image to dig deeper later. Please, see this image and continue reading below.
 
-![Patch Structure](./PatchStructure.png)
+![Patch Structure](./images/PatchStructure.png)
 
 When you do the release, regardless of whatever of type of release it is, your are generating a patch. Patch is a file that contains instructions how to transform your application from a version `X` to version `Y`. Later on, we will discuss it with an example but now, let's start our journey with trying to understand what `PatchInfo.json` is. Below is a small example:
 
@@ -112,6 +112,6 @@ This time, we will speak about what kind of updates you might chose and when to 
 
 The best when we work on application features is to publish diff frequently. This should result with a small footprint for end user and makes the users works with the newest version of application for the most of time. Let's look at the proposition of how release model should looks like for the most of applications
 
-![Prefered patches create model](./PreferedPatchesCreateModel.png)
+![Prefered patches create model](./images/PreferedPatchesCreateModel.png)
 
 So we basically pushed application in version `1.0` which was separate release as it was the first publish ever. Then, the longer the development took, the more differential versions were published (`1.1` and `1.2`). After few more changes we decided that we introduced so big changes that it would be worth for new users to download installer for version `1.3` and in the same time to allow users with version `1.2` transform to `1.3` so we chose full release type. The we have introduced few more small updates that ends up with more differential publishes to finally end up support of release line `1.0`. We introduced then separate `2.0` publish that discontinued working over `1.0`. 
